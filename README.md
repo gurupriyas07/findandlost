@@ -64,7 +64,8 @@ This web application provides a user-friendly platform where users can register,
 ## Project Documentation
 
 ### Screenshots
-- ![Home Page](Add_screenshot1.png) – Home page with app name and start button.  
+- ![Home Page](![Uploading 2026-02-28.png…]()
+) – Home page with app name and start button.  
 - ![Register Page](Add_screenshot2.png) – Registration page with user input fields.  
 - ![Dashboard](Add_screenshot3.png) – Dashboard showing user’s lost items.  
 
