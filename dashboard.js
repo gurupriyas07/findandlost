@@ -1,7 +1,6 @@
 // Auto login check
 window.onload = function() {
   if(localStorage.getItem("loggedInUser")){
-    showApp();
     loadItems();
   }
 };
@@ -26,7 +25,6 @@ function login() {
 
   if(storedPass === pass){
     localStorage.setItem("loggedInUser", user);
-    showApp();
     loadItems();
   } else {
     alert("Invalid Credentials");
@@ -34,8 +32,7 @@ function login() {
 }
 
 function showApp() {
-  document.getElementById("authSection").style.display = "none";
-  document.getElementById("appSection").style.display = "block";
+  // Dashboard view display
 }
 
 function logout() {
@@ -44,12 +41,12 @@ function logout() {
 }
 
 function addItem() {
-  let title = document.getElementById("title").value;
-  let description = document.getElementById("description").value;
-  let type = document.getElementById("itemType").value;
-  let imageFile = document.getElementById("imageInput").files[0];
+  let title = document.getElementById("itemName").value;
+  let description = document.getElementById("itemDesc").value;
+  let location = document.getElementById("itemLocation").value;
+  let imageFile = document.getElementById("itemImage").files[0];
 
-  if(!title || !description || !type){
+  if(!title || !description || !location){
     alert("Fill all fields");
     return;
   }
@@ -62,7 +59,7 @@ function addItem() {
     let item = {
       title: title,
       description: description,
-      type: type,
+      location: location,
       image: imageData
     };
 
@@ -70,42 +67,82 @@ function addItem() {
     items.push(item);
     localStorage.setItem("items", JSON.stringify(items));
 
+    clearForm();
     loadItems();
   };
 
   if(imageFile){
     reader.readAsDataURL(imageFile);
+  } else {
+    // No image file, just create the item
+    let item = {
+      title: title,
+      description: description,
+      location: location,
+      image: null
+    };
+
+    let items = JSON.parse(localStorage.getItem("items")) || [];
+    items.push(item);
+    localStorage.setItem("items", JSON.stringify(items));
+
+    clearForm();
+    loadItems();
+  }
+}
+
+function clearForm() {
+  document.getElementById("itemName").value = "";
+  document.getElementById("itemDesc").value = "";
+  document.getElementById("itemLocation").value = "";
+  document.getElementById("itemImage").value = "";
+  let preview = document.getElementById("preview");
+  if(preview) preview.style.display = "none";
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+  localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+}
+
+function previewImage() {
+  const fileInput = document.getElementById("itemImage");
+  const preview = document.getElementById("preview");
+  
+  if(fileInput.files && fileInput.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      preview.src = e.target.result;
+      preview.style.display = "block";
+    };
+    reader.readAsDataURL(fileInput.files[0]);
   }
 }
 
 function loadItems() {
 
-  let lostContainer = document.getElementById("lostContainer");
-  let foundContainer = document.getElementById("foundContainer");
+  let itemList = document.getElementById("itemList");
 
-  lostContainer.innerHTML = "";
-  foundContainer.innerHTML = "";
+  if(!itemList) return;
+  
+  itemList.innerHTML = "";
 
   let items = JSON.parse(localStorage.getItem("items")) || [];
 
   items.forEach((item, index) => {
 
-    let div = document.createElement("div");
-    div.className = "box";
+    let div = document.createElement("li");
+    div.className = "item";
 
     div.innerHTML = `
       <h3>${item.title}</h3>
+      <p><strong>Location:</strong> ${item.location}</p>
       <p>${item.description}</p>
-      <strong>${item.type}</strong>
-      ${item.image ? `<img src="${item.image}">` : ""}
+      ${item.image ? `<img src="${item.image}" style="max-width:100px;">` : ""}
       <button onclick="deleteItem(${index})">Delete</button>
     `;
 
-    if(item.type === "Lost"){
-      lostContainer.appendChild(div);
-    } else {
-      foundContainer.appendChild(div);
-    }
+    itemList.appendChild(div);
   });
 }
 

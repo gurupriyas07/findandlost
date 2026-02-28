@@ -22,8 +22,8 @@
         <input type="text" id="itemName" placeholder="Item Name">
         <input type="text" id="itemLocation" placeholder="Location Lost">
         <textarea id="itemDesc" placeholder="Description and contact info"></textarea>
-        <input type="file" id="itemImage" accept="image/*">
-        <img id="preview" style="width:100px; display:none;">
+        <input type="file" id="itemImage" accept="image/*" onchange="previewImage()">
+        <img id="preview" style="width:100px; display:none; margin-top:10px;">
 
         <button onclick="addItem()">Post Item</button>
     </div>
@@ -37,6 +37,6 @@
 
 </div>
 
-<script src="dashbd.js"></script>
+<script src="dashboard.js"></script>
 </body>
 </html>
