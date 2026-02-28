@@ -1,4 +1,4 @@
-# Lost & Found Web Application 🎯
+# Lost & Found Web Application 
 
 ## Basic Details
 **Team Name:** EMBER  
