@@ -1,4 +1,4 @@
-# Lost & Found Web Application 🎯
+# Lost & Found Web Application 
 
 ## Basic Details
 **Team Name:** EMBER  
@@ -7,7 +7,7 @@
 - Anagha C –  College of Engineering Trivandrum
 
 **Hosted Project Link:**  
-[Add your GitHub Pages or live link here]
+[[Add your GitHub Pages or live link here](https://gurupriyas07.github.io/findandlost/)]
 
 ---
 
@@ -63,16 +63,24 @@ This web application provides a user-friendly platform where users can register,
 
 ## Project Documentation
 
-### Screenshots
-- ![Home Page](Add_screenshot1.png) – Home page with app name and start button.  
-- ![Register Page](Add_screenshot2.png) – Registration page with user input fields.  
-- ![Dashboard](Add_screenshot3.png) – Dashboard showing user’s lost items.  
 
-### System Architecture
+### Screenshots
+<img width="200" height="200" alt="2026-02-28" src="https://github.com/user-attachments/assets/ef1b2477-c78c-41d0-bdd5-388205d8af87" />
+<img width="200" height="200100" alt="2026-02-28 (2)" src="https://github.com/user-attachments/assets/00032089-1d72-4ed1-ae5d-fd9c6729975f" />
+<img width="200" height="200" alt="2026-02-28 (4)" src="https://github.com/user-attachments/assets/b9e2ea18-6ede-445b-9909-a25c4257fb92" />
+<img width="200" height="200" alt="2026-02-28 (7)" src="https://github.com/user-attachments/assets/e551fa2d-0a97-4880-8bfa-2d21e023f13a" />
+
+
+
+###<img width="788" height="621" alt="2026-02-28 (2)" src="https://github.com/user-attachments/assets/00032089-1d72-4ed1-ae5d-fd9c6729975f" />
+
+ System Architecture
+
 The application is **frontend-only**. HTML pages interact with JavaScript, which stores user and lost item data in LocalStorage. The dashboard retrieves and displays this data.
 
 ### Application Workflow
 1. User registers → credentials saved in LocalStorage.  
+
 2. User logs in → redirected to dashboard.  
 3. User adds lost items → stored in LocalStorage.  
 4. User manages only their own posts → can delete/update items.  
