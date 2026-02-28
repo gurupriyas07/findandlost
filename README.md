@@ -7,7 +7,7 @@
 - Anagha C –  College of Engineering Trivandrum
 
 **Hosted Project Link:**  
-[Add your GitHub Pages or live link here]
+[[Add your GitHub Pages or live link here](https://gurupriyas07.github.io/findandlost/)]
 
 ---
 
