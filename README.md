@@ -65,10 +65,10 @@ This web application provides a user-friendly platform where users can register,
 
 
 ### Screenshots
-<img width="200" height="100" alt="2026-02-28" src="https://github.com/user-attachments/assets/ef1b2477-c78c-41d0-bdd5-388205d8af87" />
-<img width="200" height="100" alt="2026-02-28 (2)" src="https://github.com/user-attachments/assets/00032089-1d72-4ed1-ae5d-fd9c6729975f" />
-<img width="200" height="100" alt="2026-02-28 (4)" src="https://github.com/user-attachments/assets/b9e2ea18-6ede-445b-9909-a25c4257fb92" />
-<img width="200" height="100" alt="2026-02-28 (7)" src="https://github.com/user-attachments/assets/e551fa2d-0a97-4880-8bfa-2d21e023f13a" />
+<img width="200" height="200" alt="2026-02-28" src="https://github.com/user-attachments/assets/ef1b2477-c78c-41d0-bdd5-388205d8af87" />
+<img width="200" height="200100" alt="2026-02-28 (2)" src="https://github.com/user-attachments/assets/00032089-1d72-4ed1-ae5d-fd9c6729975f" />
+<img width="200" height="200" alt="2026-02-28 (4)" src="https://github.com/user-attachments/assets/b9e2ea18-6ede-445b-9909-a25c4257fb92" />
+<img width="200" height="200" alt="2026-02-28 (7)" src="https://github.com/user-attachments/assets/e551fa2d-0a97-4880-8bfa-2d21e023f13a" />
 
 
 
