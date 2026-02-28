@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Lost & Found</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-bar">
+    <h2 id="welcomeUser"></h2>
+    <div>
+        <button onclick="toggleDarkMode()">🌙</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="box">
+        <h3>Post Lost Item</h3>
+
+        <input type="text" id="itemName" placeholder="Item Name">
+        <input type="text" id="itemLocation" placeholder="Location Lost">
+        <textarea id="itemDesc" placeholder="Description and contact info"></textarea>
+        <input type="file" id="itemImage" accept="image/*">
+        <img id="preview" style="width:100px; display:none;">
+
+        <button onclick="addItem()">Post Item</button>
+    </div>
+
+
+
+    <div class="box">
+        <h3>Reported Items</h3>
+        <ul id="itemList"></ul>
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
