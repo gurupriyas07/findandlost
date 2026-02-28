@@ -64,16 +64,20 @@ This web application provides a user-friendly platform where users can register,
 ## Project Documentation
 
 ### Screenshots
-- ![Home Page](![Uploading 2026-02-28.png…]()
-) – Home page with app name and start button.  
-- ![Register Page](Add_screenshot2.png) – Registration page with user input fields.  
-- ![Dashboard](Add_screenshot3.png) – Dashboard showing user’s lost items.  
+
+![Uploading 2026-02-28.png…]()
+![Uploading 2026-02-28 (4).png…]()
+<img width="946" height="621" alt="2026-02-28 (7)" src="https://github.com/user-attachments/assets/e551fa2d-0a97-4880-8bfa-2d21e023f13a" />
+
+
 
 ### System Architecture
+
 The application is **frontend-only**. HTML pages interact with JavaScript, which stores user and lost item data in LocalStorage. The dashboard retrieves and displays this data.
 
 ### Application Workflow
 1. User registers → credentials saved in LocalStorage.  
+
 2. User logs in → redirected to dashboard.  
 3. User adds lost items → stored in LocalStorage.  
 4. User manages only their own posts → can delete/update items.  
